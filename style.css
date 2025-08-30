@@ -512,3 +512,241 @@ footer{
     border: 1px solid #f16101;
     color: #f16101;
 }
+ .panel{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px auto;
+     }
+     .sideBar{
+        width: 20%;
+        background-color: #046588;
+        height: 700px;
+        position: sticky;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+     
+     }
+     .sideBar img{
+        width: 150px;
+        aspect-ratio: 1/1;
+        border:2px double #f5ece0;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 32px auto;
+     }
+     .sideBar ul li a{
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        margin: 8px auto;
+        color: #f5ece0;
+        align-items: center;
+        padding: 0 16px;
+     }
+     .sideBar ul li a:hover{
+        background-color: #f5ece04c;
+     }
+     .sideBar ul li a span{
+        display: flex;
+        gap: 16px;
+     }
+     .dashbords{
+        width: 78%;
+        height: 700px;
+        margin: 0 auto;
+        overflow-y: auto;
+        visibility: visible;
+  
+     }
+     .dashbords h2{
+        margin: 20px 20px 0 20px;
+     }
+     .dashbords::-webkit-scrollbar{
+        color: #336d82;
+     }
+ .titleinpanel{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .orderCustomer{
+    width: 95%;
+ }
+     .orderCustomer table th{
+        background-color: #5f99ae;
+        text-align: center;
+        padding: 12px;
+        color: #f5ece0;
+        border-left:3px solid #f5ece0;
+     }
+     .lastBloge table td,.lastGallery table td,.orderCustomer table td{
+        text-align: center;
+        padding: 8px;
+        color: #888;
+     }
+     .orderCustomer table{
+        width: 95%;
+        margin: 0 auto;
+     }
+     .profile{
+        width: 100%;
+        margin: 56px auto;
+     }
+     .profile form{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     .profile input{
+        width:60%;
+        height: 40px;
+        border-radius: 5px;
+        padding: 0 16px;
+        background-color: #f3f3f3;
+        border: none;
+        outline: none;
+     }
+     .profile input[type="file"]{
+       display: none;
+     }
+     .profile #uplaods{
+          background: #f16101;
+          color: #f5ece0;
+          padding: 8px 32px;
+          border-radius: 5px;
+          margin: 16px auto;
+          cursor: pointer;
+          transition: .3s;
+     }
+     .profile #uplaods:hover{
+          background:transparent;
+          color: #f16101;
+          border: 1px solid #f16101;
+     }
+     .profile button{
+        width: 150px;
+        height: 40px;
+        background: transparent;
+        border: 1px solid #336d82;
+        border-radius: 5px;
+        color: #336d82;
+        margin: 16px auto;
+     }
+     .profile button:hover{
+        background-color: #336d82;
+        color: #f5ece0
+     }
+     .profile a{
+        width: 100px;
+        height: 40px;
+        background-color: #f16101;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+     }
+     .profile textarea{
+        width:60%;
+        height: 250px;
+        border-radius: 5px;
+        padding:16px;
+        background-color: #f3f3f3;
+        border: none;
+        outline: none;
+        resize: none;
+     }
+     .lastBloge.total,.lastGallery.total{
+        width: 95%;
+     }
+     .addtoDoList{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 56px auto;
+     }
+     .addtoDoList form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 16px;
+        flex-wrap: wrap;
+     }
+     .addtoDoList input{
+        width:60%;
+        height: 40px;
+        border-radius: 5px;
+        padding: 0 16px;
+        background-color: #f3f3f3;
+        border: none;
+        outline: none;
+     }
+     .addtoDoList button{
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #336d82;
+        color: #336d82;
+        transition: .3s;
+        background-color: transparent;
+        font-family: 'sans';
+     }
+     .addtoDoList button:hover{
+        background-color: #336d82;
+        color: #f5ece0;
+     }
+     .dispalyListToDo{
+        width: 100%;
+        margin: 24px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .dispalyListToDo ul{
+        width: 100%;
+     }
+     .dispalyListToDo ul li{
+        border: 1px solid #d3d3d3;
+        width: 50%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        margin: 4px auto;
+        border-radius: 5px;
+     }
+     .dispalyListToDo ul li:hover{
+        background-color: #f5ece038;
+     }
+     #titleTodo{
+        font-size: 23px;
+     }
+     #hide{
+        visibility: hidden;
+     }
+     .dispalyListToDo span{
+        font-size: 20px;
+        cursor: pointer;
+     }
+     #xMarkspanel{
+        z-index: 10;
+        position: absolute;
+        top: 16px;
+        left:16px;
+        color: #f5ece0;
+        font-size: 20px;
+        visibility: hidden;
+     }
