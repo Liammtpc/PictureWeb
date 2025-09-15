@@ -1,3 +1,8 @@
+<?php
+$db = mysqli_connect("localhost", "root", "", "webpicture");
+mysqli_query($db, "SET time_zone = '+3:30'");
+mysqli_query($db, "SET CHARACTER SET 'utf8'");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +15,9 @@
   </head>
   <body>
     <div class="tob-menu">
-      <img src="" alt="" /><img src="" alt="" /><img src="" alt="" /><img
+      <img src="picture/instagrams.png" alt="" />
+      <img src="picture/telegram.png" alt="" />
+      <img src="picture/whatsapp.png" alt="" /><img
         src=""
         alt=""
       />
@@ -127,10 +134,35 @@
               <img src="picture/envlope2.png" alt="" />
             </div>
           </div>
-          <form action="#">
-            <input type="text" placeholder="نام کاربری" />
-            <input type="text" placeholder="ایمیل یا شماره موبایل" />
-            <textarea name="" id="" placeholder="توضیحات"></textarea>
+          <?php
+          $ok=false;
+          $error="";
+          if(isset($_POST['User'])){
+              $user=$_POST['User'];
+              $Eamil=$_POST['Email'];
+              $Dis=$_POST['Dis'];
+               if ($user == "") {
+                    echo $error = '<span style="color:red;">نام کاربری را وارد نمایید</span>';
+                    $ok = false;
+                }
+                if ($Eamil == "") {
+                    echo "<br/>";
+                    echo $error = '<span style="color:red;> شماره تلفن کاربر را وارد نمایید</span>';
+                    $ok = false;
+                }
+                if ($error == "") {
+                    $ok = true;
+                }
+                if ($ok == true) {
+                    $insertRequest=mysqli_query($db,"insert into requestuesr (Username,Email,Discription)values('$user','$Eamil','$Dis')");
+                    echo '<p style="color:green;">اطلاعات شما جهت تماس با موفقیت ثبت گردید</p>';
+                }
+          }
+          ?>
+          <form action="#" method="post">
+            <input type="text" name="User" placeholder="نام کاربری" />
+            <input type="text" name="Email" placeholder="ایمیل یا شماره موبایل" />
+            <textarea name="Dis" id="" placeholder="توضیحات"></textarea>
             <button type="submit">
               ارسال پیام<img src="picture/arrow.png" alt="" />
             </button>

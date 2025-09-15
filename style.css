@@ -18,17 +18,33 @@ a{
 h2{
     color: #f16101;
 }
+span img{
+    width: 25px;
+    position: absolute ;
+    top: 40px;
+    right: 40px;
+}
 .tob-menu{
     width: 100%;
     height: 150px;
     background-color: #046588;
     z-index: 1;
     position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
 }
 .continer{
     width: 1350px;
     margin: 0 auto;
     position: relative;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 .empty{
     width: 100%;
@@ -40,7 +56,10 @@ h2{
     background-color: #e9e3df;
     position: absolute;
     top: -124px;
-    right: 0;;
+    right: 0;
+}
+.tob-menu img{
+    width: 25px;
 }
 .sub-menu{
     display: flex;
@@ -58,6 +77,51 @@ h2{
     width: 100%;
     height: 260px;
     padding: 20px;
+}
+#menu2{
+    width: 100%;
+    background-color: #f16101;
+    position: absolute;
+    top:0;
+    right: -5000px;
+    z-index: 4;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+#close{
+    position: absolute;
+    z-index: 5;
+    top: 40px;
+    left: 100px;
+}
+#menu2 img{
+    width: 25px;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+#menu2 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+#menu2 ul li a{
+    color: white;
+}
+#visiablety{
+    display: none;
+}
+#hambur{
+    display: none;
+}
+#visiablety img{
+    width: 25px;
 }
 #sectionMenu{
     width: 33%;
@@ -438,7 +502,7 @@ footer{
     width: 25px;
 }
 /*******/
-.login{
+.logins{
     width: 100%;
     height: 739px;
     background-image: url('picture/bg2.webp');
@@ -450,7 +514,7 @@ footer{
     justify-content: center;
 
 }
-.login::before{
+.logins::before{
     content: "";
     width: 100%;
     height: 739px;
@@ -460,8 +524,8 @@ footer{
     background-color: white;
     opacity: .1;
 }
-.login form{
-    width: 25%;
+.logins form{
+    width: 350px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -474,13 +538,13 @@ footer{
     border: 1px solid #e9e3df;
     z-index: 1;
 }
-.login form h2{
+.logins form h2{
     font-size: 32px;
     font-weight: bolder;
     margin: 16px auto;
     color: white;
 }
-.login form input{
+.logins form input{
     width: 90%;
     height: 40px;
     border-radius: 10px;
@@ -491,7 +555,7 @@ footer{
     outline: none;
     font-size: 16px;
 }
-.login form button{
+.logins form button{
     width: 150px;
     height: 40px;
     border-radius: 10px;
@@ -507,10 +571,13 @@ footer{
     justify-content: space-evenly;
     gap: 16px;
 }
-.login form button:hover{
+.logins form button:hover{
     background-color: transparent;
     border: 1px solid #f16101;
     color: #f16101;
+}
+.logins form button img{
+    width: 30px;
 }
  .panel{
         width: 100%;
@@ -750,3 +817,211 @@ footer{
         font-size: 20px;
         visibility: hidden;
      }
+         .GalleyandBloge,.orderCustomer{
+        width: 95%;
+        margin: 24px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .lastBloge,.lastGallery{
+        width: 48%;
+     }
+     .lastBloge img, .lastGallery img{
+        width: 120px;
+        aspect-ratio: 1/.5;
+     }
+     .lastBloge table,.lastGallery table,.orderCustomer table{
+        width: 95%;
+        border-collapse: collapse;
+     }
+     .lastBloge table tr,.lastGallery table tr,.orderCustomer table tr{
+        border:1px solid #989898;
+        z-index: 2;
+     }
+     .lastBloge table th,.lastGallery table th{
+        background-color: #5f99ae;
+        text-align: center;
+        padding: 12px;
+        color: #f5ece0;
+        border-left:3px solid #f5ece0;
+     }
+     .orderCustomer table th{
+        background-color: #5f99ae;
+        text-align: center;
+        padding: 12px;
+        color: #f5ece0;
+        border-left:3px solid #f5ece0;
+     }
+     .lastBloge table td,.lastGallery table td,.orderCustomer table td{
+        text-align: center;
+        padding: 8px;
+        color: #888;
+     }
+     .orderCustomer table{
+        width: 95%;
+        margin: 0 auto;
+     }
+     .GalleyandBloge{
+    flex-wrap: wrap;
+}
+.lastBloge, .lastGallery{
+    width: 95%;
+    margin: 8px auto;
+}
+.allCategory{
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.searchBoxBloge form input{
+    width: 295px;
+}
+#a3 {
+    bottom: 5px;
+    left: 90px;
+}
+     /**********/
+     @media only screen and (min-width:600px) and (max-width:900px){
+        .continer{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+        } 
+        .sub-menu nav ul {
+            gap: 11px;
+        }
+        .sub-menu nav ul li a{
+            font-size: 15px;
+        }
+        .icon1 img{
+            visibility: hidden;
+        } 
+        .icon2 img{
+            visibility: hidden;
+        }
+        .banner{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        .banner-content, .banner-image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-image{
+            margin: 150px auto;
+        }
+        .banner-content{
+            margin: 15px auto;
+        }
+        .about-Us{
+            flex-wrap: wrap;
+        }
+        .about-us-picture, .about-us-content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-us-content{
+            flex-direction: column;
+            margin: 20px auto;
+        }
+        .contact form {
+            width: 335px;
+        }
+        .contact-content {
+              width: 45%;
+        }
+        .contact-content-bg img {
+                 width: 65px;
+        }
+}
+@media only screen and (max-width: 576px) {
+   .continer{
+            width: 100%;
+        }
+        header{
+            width: 100%;
+        }
+        .banner{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        .banner-content, .banner-image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner-image{
+            margin: 150px auto;
+        }
+        .banner-content{
+            margin: 15px auto;
+        }
+        .about-Us{
+            flex-wrap: wrap;
+        }
+        .about-us-picture, .about-us-content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-us-content{
+            flex-direction: column;
+            margin: 20px auto;
+        }
+        .banner-image img{
+            width: 100%;
+        }
+        .icon1,.icon2{
+            visibility: hidden;
+        }
+        .contact{
+            background-color: transparent;
+        }
+        .contact-content{
+            visibility: hidden;
+        }
+        footer{
+            flex-wrap: wrap;
+            height: auto;
+        }
+        .about, .link, .contacts{
+            width: 100%;
+        }
+        details{
+            width: 95%;
+        }
+        .logins form{
+            width: 95%;
+        }
+        #hambur{
+             display: block;
+        }
+        #menuHide{
+            visibility: hidden;
+        }
+        .sideBar{
+            position: absolute;
+            right: -5000px;
+            width: 100%;
+        }
+        .profile form{
+            width: 100%;
+        }
+        .dashbords{
+            width: 100%;
+        }
+        .profile input,.profile textarea{
+            width: 90%;
+        }
+        .logo img {
+            right: -15px;
+            position: relative;
+        }
+}
