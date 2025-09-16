@@ -65,7 +65,7 @@ mysqli_query($db, "SET CHARACTER SET 'utf8'");
                                         <th>عنوان</th>
                                     </tr>
                                     <?php
-                                    $showbloge = mysqli_query($db, "select*from bloge ORDER BY Title DESC LIMIT 3");
+                                    $showbloge = mysqli_query($db, "select*from discripton ORDER BY Title DESC LIMIT 3");
                                     while ($rowshowbloge = mysqli_fetch_array($showbloge)) {
                                         echo '
                                             <tr>
